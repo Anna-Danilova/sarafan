@@ -26,7 +26,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,10 +41,10 @@
       href="https://fonts.googleapis.com/css2?family=Forum&family=Playfair+Display:wght@500&display=swap"
       rel="stylesheet"
     />
-
+  
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-
+  
   <body>
     <div class="page-wrapper">
       <header class="header">
@@ -55,7 +55,74 @@
                 <a class="header__menu-link" href="#new">Новинки</a>
               </li>
               <li class="header__menu-item">
-                <a class="header__menu-link" href="catalog.html">Одежда</a>
+                <a class="header__menu-link header__open-clothes" href="catalog.html">Одежда</a>
+                <div class="header__clothes-menu">
+                  <div class="header__clothes-menu-wrapper container">
+                    <ul class="header__clothes-menu-list">
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link header__clothes-menu-link--all" href="catalog.html"
+                          >Все</a
+                        >
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Платья<sup>248</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Пальто и тренчи<sup>32</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Пуховики<sup>12</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Куртки и жилеты<sup>16</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Деним<sup>56</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Блузы и топы<sup>182</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Брюки<sup>80</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Юбки<sup>22</sup></a>
+                      </li>
+                    </ul>
+                    <ul class="header__clothes-menu-list">
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Рубашки<sup>63</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Футболки<sup>108</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Свитеры<sup>202</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Толстовки<sup>93</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Комплекты<sup>26</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Комбинезоны<sup>30</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Шорты<sup>23</sup></a>
+                      </li>
+                      <li class="header__clothes-menu-item">
+                        <a class="header__clothes-menu-link" href="catalog.html">Купальники<sup>32</sup></a>
+                      </li>
+                    </ul>
+                    <img
+                      class="header__clothes-menu-img"
+                      src="images/dropdawn-menu-img.jpg"
+                      alt="Девушка в белом платье"
+                    />
+                  </div>
+                </div>
+                
               </li>
               <li class="header__menu-item">
                 <a class="header__menu-link" href="catalog.html">Аксессуары</a>
@@ -65,7 +132,7 @@
               </li>
             </ul>
           </nav>
-          <a class="header__logo" href="index.html">
+          <a class="header__logo">
             <span class="visually-hidden">Логотип Sarafan</span>
           </a>
           <div class="header__user-menu">
@@ -74,32 +141,16 @@
                 <input class="header__search-input" type="text" placeholder="Поиск" />
                 <button class="header__search-button" type="submit">
                   <span class="visually-hidden">Искать</span>
-                  <svg
-                    width="19"
-                    height="19"
-                    viewBox="0 0 19 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.7398 13.6798C6.0038 13.6798 3.7998 11.4758 3.7998 8.7398C3.7998 6.0038 6.0038 3.7998 8.7398 3.7998C11.4758 3.7998 13.6798 6.0038 13.6798 8.7398C13.6798 11.4758 11.4758 13.6798 8.7398 13.6798ZM8.7398 4.5598C6.4218 4.5598 4.5598 6.4218 4.5598 8.7398C4.5598 11.0578 6.4218 12.9198 8.7398 12.9198C11.0578 12.9198 12.9198 11.0578 12.9198 8.7398C12.9198 6.4218 11.0578 4.5598 8.7398 4.5598Z"
-                      fill="#DADADA"
-                    />
-                    <path
-                      d="M12.4192 11.8818L15.8316 15.2942L15.2942 15.8316L11.8818 12.4192L12.4192 11.8818Z"
-                      fill="#DADADA"
-                    />
-                  </svg>
                 </button>
               </form>
             </div>
             <div class="header__buttons">
-              <a class="header__button header__button--favorite" href="favorite.html">
+              <a class="header__button header__button--favorite-main" href="favorite.html">
                 <span class="visually-hidden">Избранное</span>
                 <svg
                   width="25"
-                  height="25"
-                  viewBox="0 0 25 25"
+                  height="23"
+                  viewBox="0 0 25 23"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -109,12 +160,12 @@
                   />
                 </svg>
               </a>
-              <a class="header__button header__button--bascket" href="#">
+              <a class="header__button header__button--bascket-main" href="#">
                 <span class="visually-hidden">Корзина</span>
                 <svg
-                  width="25"
-                  height="25"
-                  viewBox="0 0 25 27"
+                  width="23"
+                  height="27"
+                  viewBox="0 0 23 27"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -134,7 +185,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M11.729 14.583C18.1146 14.583 23.2915 16.9988 23.2915 19.9788V23.833H0.166504V19.9788C0.166504 16.9988 5.34342 14.583 11.729 14.583ZM21.7498 19.9788C21.7498 17.8513 17.2636 16.1247 11.729 16.1247C6.19442 16.1247 1.70817 17.8513 1.70817 19.9788V22.2913H21.7498V19.9788ZM11.729 0.708008C13.1601 0.708008 14.5325 1.2765 15.5444 2.28841C16.5563 3.30033 17.1248 4.67278 17.1248 6.10384C17.1248 7.5349 16.5563 8.90736 15.5444 9.91927C14.5325 10.9312 13.1601 11.4997 11.729 11.4997C10.2979 11.4997 8.92549 10.9312 7.91357 9.91927C6.90166 8.90736 6.33317 7.5349 6.33317 6.10384C6.33317 4.67278 6.90166 3.30033 7.91357 2.28841C8.92549 1.2765 10.2979 0.708008 11.729 0.708008ZM11.729 2.24967C10.7068 2.24967 9.72649 2.65574 9.0037 3.37853C8.2809 4.10133 7.87484 5.08165 7.87484 6.10384C7.87484 7.12603 8.2809 8.10635 9.0037 8.82915C9.72649 9.55194 10.7068 9.95801 11.729 9.95801C12.7512 9.95801 13.7315 9.55194 14.4543 8.82915C15.1771 8.10635 15.5832 7.12603 15.5832 6.10384C15.5832 5.08165 15.1771 4.10133 14.4543 3.37853C13.7315 2.65574 12.7512 2.24967 11.729 2.24967Z"
+                    d="M11.7292 14.583C18.1148 14.583 23.2917 16.9988 23.2917 19.9788V23.833H0.166748V19.9788C0.166748 16.9988 5.34366 14.583 11.7292 14.583ZM21.7501 19.9788C21.7501 17.8513 17.2638 16.1247 11.7292 16.1247C6.19466 16.1247 1.70841 17.8513 1.70841 19.9788V22.2913H21.7501V19.9788ZM11.7292 0.708008C13.1603 0.708008 14.5328 1.2765 15.5447 2.28841C16.5566 3.30033 17.1251 4.67278 17.1251 6.10384C17.1251 7.5349 16.5566 8.90736 15.5447 9.91927C14.5328 10.9312 13.1603 11.4997 11.7292 11.4997C10.2982 11.4997 8.92573 10.9312 7.91382 9.91927C6.9019 8.90736 6.33341 7.5349 6.33341 6.10384C6.33341 4.67278 6.9019 3.30033 7.91382 2.28841C8.92573 1.2765 10.2982 0.708008 11.7292 0.708008ZM11.7292 2.24967C10.7071 2.24967 9.72674 2.65574 9.00394 3.37853C8.28114 4.10133 7.87508 5.08165 7.87508 6.10384C7.87508 7.12603 8.28114 8.10635 9.00394 8.82915C9.72674 9.55194 10.7071 9.95801 11.7292 9.95801C12.7514 9.95801 13.7318 9.55194 14.4546 8.82915C15.1774 8.10635 15.5834 7.12603 15.5834 6.10384C15.5834 5.08165 15.1774 4.10133 14.4546 3.37853C13.7318 2.65574 12.7514 2.24967 11.7292 2.24967Z"
                     fill="#CECECE"
                   />
                 </svg>
@@ -146,6 +197,7 @@
 
       <main></main>
       <footer>FOOTER</footer>
+      
     </div>
     <script src="js/main.min.js"></script>
   </body>

@@ -1,0 +1,92 @@
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 86px;
+    background-color: $background-color;
+  }
+
+  &__menu-list {
+    display: flex;
+    gap: 44px;
+  }
+
+  &__menu-link {
+    padding-bottom: 25px;
+    font-size: 16px;
+    color: $main-color;
+    border-bottom: 1px transparent solid;
+    transition: 0.3s linear;
+  }
+
+  &__logo {
+    display: block;
+    width: 182px;
+    height: 86px;
+    background: center / contain url(../images/Logo.png) no-repeat;
+  }
+
+  &__user-menu {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-input {
+    width: 200px;
+    height: 25px;
+    padding: 0 35px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px #dadada solid;
+    background-color: transparent;
+    outline: none;
+    &::placeholder {
+      color: #dadada;
+    }
+  }
+
+  &__search-button {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    width: 19px;
+    height: 19px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 2px;
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    svg path {
+      fill: #cecece;
+      transition: 0.5s all;
+    }
+  }
+}
+
+@media (any-hover: hover) {
+  .header {
+    &__menu-link:hover {
+      border-bottom: 1px $main-color solid;
+    }
+
+    &__button:hover {
+      svg path {
+        fill: $main-color;
+      }
+    }
+  }
+}

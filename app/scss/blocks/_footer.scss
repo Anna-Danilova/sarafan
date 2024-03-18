@@ -31,6 +31,10 @@
     margin-top: 10px;
   }
 
+  &__content-link {
+    text-wrap: nowrap;
+  }
+
   &__copyright {
     padding: 35px 0;
     font-size: 14px;

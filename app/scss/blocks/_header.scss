@@ -75,6 +75,12 @@
     width: 182px;
     height: 86px;
     background: center / contain url(../images/Logo.png) no-repeat;
+
+    &--dark {
+      width: 129px;
+      height: 53px;
+      background: center / contain url(../images/logo-dark.jpg) no-repeat;
+    }
   }
 
   &__user-menu {
@@ -99,6 +105,13 @@
     &::placeholder {
       color: #dadada;
     }
+
+    &--index {
+      border-bottom: 1px $input-color solid;
+      &::placeholder {
+        color: $input-color;
+      }
+    }
   }
 
   &__search-button {
@@ -107,6 +120,7 @@
     top: 3px;
     width: 19px;
     height: 19px;
+    background-image: url(../images/icons/search-index.svg);
   }
 
   &__buttons {
@@ -123,6 +137,12 @@
     svg path {
       fill: #cecece;
       transition: 0.5s all;
+    }
+
+    &--index {
+      svg path {
+        fill: $main-color;
+      }
     }
   }
 
@@ -311,6 +331,12 @@
     &__button:hover {
       svg path {
         fill: $main-color;
+      }
+    }
+
+    &__button--index:hover {
+      svg path {
+        fill: $input-color;
       }
     }
 

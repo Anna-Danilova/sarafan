@@ -5,6 +5,14 @@
     align-items: center;
     min-height: 86px;
     background-color: $background-color;
+
+    &--index {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+    }
   }
 
   &__burger {

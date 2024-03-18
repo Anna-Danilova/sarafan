@@ -1,0 +1,25 @@
+.button {
+  display: block;
+  padding: 19px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 113.9%;
+  letter-spacing: 3%;
+  text-align: center;
+  border: 1px solid #cecece;
+  transition: 0.3s linear all;
+
+  &--white {
+    background-color: #ffffff;
+  }
+}
+
+@media (any-hover: hover) {
+  .button {
+    &--white:hover {
+      color: #ffffff;
+      background-color: $main-color;
+      border: 1px solid $main-color;
+    }
+  }
+}

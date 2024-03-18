@@ -154,6 +154,135 @@
       display: none;
     }
   }
+
+  &__slider {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    transition: 1s all;
+  }
+
+  &__content {
+    &--first {
+      width: 100%;
+      min-height: 954px;
+      background: center / cover url(../images/bg-main-1.jpeg) no-repeat;
+    }
+
+    &--second {
+      width: 100%;
+      min-height: 954px;
+      background: center / cover url(../images/bg-main-2.jpg) no-repeat;
+    }
+  }
+
+  &__content-inner {
+    &--first {
+      width: 100vw;
+      margin-left: auto;
+      padding-left: 17%;
+      padding-top: 30%;
+    }
+
+    &--second {
+      width: 100vw;
+      margin-left: auto;
+      padding-left: 45%;
+      padding-top: 20%;
+    }
+  }
+
+  &__text {
+    &--first {
+      font-family: 'Forum', serif;
+      font-weight: 400;
+      font-size: 63px;
+      line-height: 114%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--second {
+      margin-bottom: 25px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 63px;
+      line-height: 114%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-align: center;
+      color: $background-color;
+
+      span {
+        display: block;
+        margin-bottom: 25px;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 114%;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+
+  &__content-button {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  &__arrow-next {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    svg path {
+      transition: 0.3s linear;
+    }
+  }
+
+  &__arrow-prev {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    svg path {
+      transition: 0.3s linear;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: rgba(229, 229, 229, 0.46);
+    transition: 0.3s all;
+
+    & + & {
+      margin-left: 10px;
+    }
+
+    &--active {
+      background-color: #dcdbdb;
+    }
+  }
 }
 
 @media (any-hover: hover) {
@@ -175,6 +304,17 @@
       svg path {
         fill: $main-color;
       }
+    }
+
+    &__arrow-prev:hover,
+    &__arrow-next:hover {
+      svg path {
+        fill: $main-color;
+      }
+    }
+
+    &__dot:hover {
+      background-color: #dcdbdb;
     }
   }
 }

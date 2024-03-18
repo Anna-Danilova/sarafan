@@ -15,9 +15,70 @@ window.addEventListener('click', e => {
   }
 });
 
+//HEADER-SLIDER
+
+const headerSlider = document.querySelector('.header__slider');
+const headerSliderContent = document.querySelectorAll('.header__content');
+const headerSliderLine = document.querySelector('.header__slider-wrapper');
+const headerDots = document.querySelectorAll('.header__dot');
+const headerBtnNext = document.querySelector('.header__arrow-next');
+const headerBtnPrev = document.querySelector('.header__arrow-prev');
+
+let sliderCount = 0;
+let sliderWidth = headerSlider.offsetWidth;
+
+function thisSlide(index) {
+  headerDots.forEach(item => item.classList.remove('header__dot--active'));
+  headerDots[index].classList.add('header__dot--active');
+}
+
+function rollSlider() {
+  headerSliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+}
+
+function changeLogo() {
+  if (sliderCount % 2 === 0) {
+    document.querySelector('.header__logo').classList.add('header__logo--dark');
+  } else if (sliderCount % 2 !== 0) {
+    document.querySelector('.header__logo').classList.remove('header__logo--dark');
+  }
+}
+
+function nextSlide() {
+  sliderCount++;
+  if (sliderCount >= headerSliderContent.length) {
+    sliderCount = 0;
+  }
+  rollSlider();
+  thisSlide(sliderCount);
+  changeLogo();
+}
+
+function prevSlide() {
+  sliderCount--;
+  if (sliderCount < 0) sliderCount = headerSliderContent.length - 1;
+  rollSlider();
+  thisSlide(sliderCount);
+  changeLogo();
+}
+
+headerBtnNext.addEventListener('click', nextSlide);
+headerBtnPrev.addEventListener('click', prevSlide);
+
+headerDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    sliderCount = index;
+    rollSlider();
+    thisSlide(sliderCount);
+    changeLogo();
+  });
+});
+
+// setInterval(() => {
+//   nextSlide();
+// }, 5000);
+
 //FOOTER-ACCORDEON
-// const footerAccordeonContent = document.querySelectorAll('.footer__content');
-// const footerAccordeonBtn = Array.from(document.querySelectorAll('.footer__title'));
 
 const footerAccordeonContent = Array.from(document.querySelectorAll('.footer__content-accordeon'));
 

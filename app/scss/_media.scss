@@ -1,5 +1,11 @@
 @media (max-width: 1024px) {
   .header {
+    &__wrapper {
+      &--index {
+        position: static;
+      }
+    }
+
     &__burger {
       display: block;
     }
@@ -17,6 +23,24 @@
 
     &__menu-link {
       display: none;
+    }
+
+    &__text {
+      &--first {
+        font-size: 43px;
+      }
+
+      &--second {
+        font-size: 43px;
+
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__content-button {
+      width: 210px;
     }
 
     &__clothes-menu {
@@ -90,6 +114,61 @@
 }
 
 @media (max-width: 576px) {
+  .header {
+    &__content-inner {
+      &--first {
+        //margin-left: 0 auto;
+        padding: 0;
+        padding-top: 195px;
+      }
+
+      &--second {
+        margin-left: 0 auto;
+        padding: 0;
+        padding-top: 195px;
+      }
+    }
+
+    &__text {
+      &--first {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      &--second {
+        color: $main-color;
+      }
+    }
+
+    &__content {
+      min-height: 605px;
+
+      &--first {
+        background: center / cover url(../images/bg-main-mob.jpeg) no-repeat;
+      }
+
+      &--second {
+        background: center / cover url(../images/bg-main-mob.jpeg) no-repeat;
+      }
+    }
+
+    &__arrow-next {
+      display: none;
+    }
+
+    &__arrow-prev {
+      display: none;
+    }
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+
+      & + & {
+        margin-left: 5px;
+      }
+    }
+  }
+
   .footer {
     &__logo {
       order: 1;

@@ -1,5 +1,6 @@
 .product {
   position: relative;
+
   &__favorite-button {
     position: absolute;
     top: 12px;
@@ -11,5 +12,10 @@
 
   &__description {
     margin-top: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
   }
 }

@@ -10,6 +10,16 @@
     margin-top: 30px;
   }
 
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    display: none;
+  }
+
   &__product {
     &--big {
       grid-column: span 2;

@@ -1,0 +1,15 @@
+.product {
+  position: relative;
+  &__favorite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 26px;
+    height: 26px;
+    background: center / contain url(../images/icons/product-favorite.svg) no-repeat;
+  }
+
+  &__description {
+    margin-top: 20px;
+  }
+}

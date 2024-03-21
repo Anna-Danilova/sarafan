@@ -124,6 +124,25 @@
     }
   }
 
+  .promo {
+    padding-top: 50px;
+
+    &__description {
+      max-width: 230px;
+      margin-left: 20px;
+      font-size: 11px;
+    }
+
+    &__link {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    &__images {
+      margin-top: 15px;
+    }
+  }
+
   .footer {
     &__wrapper {
       flex-direction: column;
@@ -211,6 +230,22 @@
       &--big {
         grid-column: span 1;
       }
+    }
+  }
+
+  .promo {
+    &__img-wrapper {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__description {
+      margin: 0 auto;
+      margin-top: 25px;
+      order: 2;
     }
   }
 

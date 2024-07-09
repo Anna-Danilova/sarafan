@@ -61,6 +61,49 @@
       transition: 0.5s fill;
     }
   }
+
+  //ВЫПАДАЮЩЕЕ МЕНЮ
+
+  &__clothes-menu {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    background-color: $background-color;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: 0.3s all;
+  }
+
+  &__clothes-menu-wrapper {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__clothes-menu-link {
+    display: block;
+    padding: 10px 0;
+    font-weight: 500;
+    color: $main-color;
+    border-bottom: 1px solid transparent;
+    sup {
+      display: none;
+      padding-left: 5px;
+      font-weight: 300;
+      color: $input-color;
+    }
+
+    &--all {
+      display: none;
+    }
+  }
+
+  &__clothes-menu-img {
+    min-width: 523px;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 @media (any-hover: hover) {
@@ -73,6 +116,15 @@
       svg path {
         fill: $main-color;
       }
+    }
+
+    &__clothes-menu-link:hover {
+      text-decoration: underline;
+    }
+
+    &__open-clothes:hover + &__clothes-menu,
+    &__clothes-menu:hover {
+      transform: rotateX(0deg) translateY(25px);
     }
   }
 }

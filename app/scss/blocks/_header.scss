@@ -6,6 +6,52 @@
     min-height: 95px;
   }
 
+  //БУРГЕР-КНОПКА
+
+  &__burger {
+    position: relative;
+    z-index: 30;
+    display: none;
+    width: 20px;
+    height: 20px;
+    padding: 5;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: $main-color;
+      transition: 0.5s all;
+
+      &:nth-child(1) {
+        transform: translateY(-5px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(5px);
+      }
+    }
+
+    &--cross {
+      span {
+        &:nth-child(1) {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  //ГЛАВНОЕ МЕНЮ
+
   &__menu-list {
     display: flex;
     gap: 44px;
